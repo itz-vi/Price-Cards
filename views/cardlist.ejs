@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://github.com/Compass/compass/blob/f9e8b54f41ee349f53413d36785b0f979881e6e3/frameworks/compass/stylesheets">
+</head>
+
+<style>
+  body {
+    background-image: linear-gradient(to top, #a8ede9af 20%, #baa7ffe1 100%);
+    height: 200vh;
+  }
+
+  .container {
+    max-width: 1320px;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+  }
+
+  /* ---------------- pricing plan box ------------------- */
+
+  .cent {
+    box-shadow: 0px 6px 13px -3px rgba(3, 2, 0, 0.4);
+    font-family: "Raleway", sans-serif;
+    line-height: 10px;
+    background: #f8f8f8;
+    width: 90%;
+    max-width: 500px;
+    padding-top: 2em;
+    margin: 2em auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px solid rgba(0, 0, 0, 0.07);
+
+  }
+
+  .cent a {
+    text-decoration: none !important;
+  }
+
+  #pr {
+    font-size: 1.5rem;
+    color: rgb(19, 19, 19);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    margin-top: 10px;
+  }
+
+  .animated {
+    color: #f81c41;
+  }
+
+  /*----------- cent  butttttttonn --------------------- */
+  .but {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    color: #26303b;
+    background-color: #e0e8ef;
+    border: 2px solid rgba(61, 61, 61, 0.219);
+    border-radius: 40px 40px 40px 40px;
+    padding: 16px 24px 16px 28px;
+    box-shadow: -4px -2px 16px 0px #ffffff, 4px 2px 16px 0px rgb(95 157 231 / 48%);
+    margin-left: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+  }
+
+  .but:hover {
+    color: #516d91;
+    background-color: #E5EDF5;
+    box-shadow: -2px -1px 8px 0px #ffffff, 2px 1px 8px 0px rgb(95 157 231 / 48%);
+  }
+
+  .but a {
+    border: none !important;
+  }
+
+
+
+
+  /* ------------ Cards ------------------------ */
+
+  .card {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    height: 530px;
+    width: 300px;
+    border: 2px solid #ff899c;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-header {
+    background-image: linear-gradient(to top, #ff0821ed 0%, #f23f5d 100%);
+    height: 200px;
+    padding-top: 30px;
+    border-radius: 12px;
+    color: white;
+  }
+
+  .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    padding-left: 0px;
+    padding-bottom: 5px;
+    line-height: 35px;
+    font-weight: bold;
+    font-size: 13px;
+    word-spacing: 5px;
+    color: rgba(0, 0, 0, 0.708);
+  }
+
+  button {
+    width: 165px;
+    height: 44px;
+    border: 3px solid #f23f5d;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: .9em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 60px;
+    color: rgba(0, 0, 0, 0.82);
+  }
+
+  button:hover {
+    background: #f81c41;
+    color: white;
+    font-size: 1em;
+  }
+
+  .small {
+    font-size: 16px;
+  }
+
+  #dol {
+    font-size: 18px;
+    margin-left: 20px;
+    letter-spacing: -7px;
+  }
+
+  .card-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: sans-serif;
+    margin-top: 0px;
+    margin-bottom: 3px;
+  }
+
+  .card-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+
+  }
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 0px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .cr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    color: rgba(252, 217, 217, 0.733);
+    border: 1px solid rgb(255, 255, 255);
+    margin-top: 0px;
+    margin-left: 90px;
+
+  }
+</style>
+
+<body>
+
+  <div class="container">
+    <div class="cent">
+      <h1>
+        <div class="animated fadeInLeft">PRICING PLAN </div>
+      </h1>
+      <p id="pr" class="animated fadeInUp delay-1">Perfect Solution Makes</p>
+      <a href="/addcard">
+        <p class="but"> SELECT PLAN</p>
+      </a>
+    </div>
+    <div class="cards flex">
+
+      <% card.forEach(card=> { %>
+        <div class="card ">
+          <div class="card-header">
+            <div class="cr">
+              <img class="logo" src="http://localhost:3000/uploads/<%= card.image %>" alt="Card image">
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">
+                <%= card.title %>
+              </h3>
+              <h3 class="card-text">
+                <p><sub id="dol">$</sub>
+                  <%= card.price %><span class="small">/per month</span>
+                </p>
+              </h3>
+            </div>
+          </div>
+          <div class="list">
+            <ul>
+              <li>
+                <%= card.add %> Members
+              </li>
+              <li>
+                <%= card.storage %> GB Sorage
+              </li>
+              <li>
+                <%= card.pack %> Pack
+              </li>
+              <li>Works on All Devices</li>
+              <li>Connect Anywhere</li>
+              <li>Unlimited BendWith</li>
+            </ul>
+          </div>
+          <button class="my-button" onclick="changeBorderColor()">Purchase Now</button>
+        </div>
+        <% }) %>
+
+    </div>
+  </div>
+
+
+  <script>
+    function changeBorderColor(button) {
+      button.style.borderColor = '#f81c41';
+      button.disabled = true;
+    }
+
+    var buttons = document.querySelectorAll('.my-button');
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        changeBorderColor(button);
+      });
+    });
+  </script>
+</body>
+
+</html>
