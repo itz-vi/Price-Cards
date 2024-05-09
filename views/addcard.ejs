@@ -27,8 +27,6 @@
 
     }
 
-
-
     .form {
         margin: 40px;
         margin-right: 100px;
@@ -61,7 +59,8 @@
     }
 
     .input {
-        padding: 10px;
+        padding: 8px;
+        font-size: 15px;
         border-radius: 5px;
         background-color: transparent;
         transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -79,9 +78,9 @@
     .input:hover,
     .input:focus {
         border-color: #3b8df2;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 53, 160, 0.2);
         transform: scale(1.01) rotateY(10deg);
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.608);
         outline: none;
     }
 
@@ -97,17 +96,17 @@
         backface-visibility: hidden;
         transform: rotateX(-10deg);
         transition: all 0.3s ease-in-out;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.463) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
 
     button:hover {
-        background-color: #0077be;
+        background-color: #0276ba;
         font-size: 17px;
         transform: scale(1.01) rotateY(10deg) rotateX(10deg);
         box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     }
 
-    /* -----------------  select tag------------ */
+    /* -----------------  select tag  box ------------ */
     #ccd {
         font-size: 3rem;
         color: rgba(232, 240, 255, 0.932);
@@ -193,13 +192,53 @@
     .tag {
         display: inline-block;
         padding: 8px 16px;
-        margin: 8px;
+        margin: 10px;
         border-radius: 20px;
         background-color: rgba(255, 255, 255, 0.3);
         background-image: linear-gradient(to top, #354077 40%, #5925b9ef 60%);
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 1px;
+    }
+
+    .sag {
+        display: inline;
+        font-size: larger;
+        padding: 10px 17px;
+        margin-top: 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        background-image: linear-gradient(to top, #354077 40%, #5925b9ef 60%);
+        font-weight: bolder;
+
+    }
+
+
+    .opt {
+        background-color: #0088ff8b;
+        color: #27134ad2;
+        font-size: larger;
+        font-weight: 700;
+        font-family: sans-serif;
+        border-radius: 25px;
+        padding: 5px;
+    }
+
+
+
+    input::file-selector-button {
+        background-image: linear-gradient(135deg, #200b6def 0%, #005896ed 70%);
+        border: 0;
+        border-radius: 8px;
+        color: #ffffff;
+        padding: 8px;
+        text-shadow: 0 1px 1px #333;
+        transition: all 0.25s;
+    }
+
+    input::file-selector-button:hover {
+        background-position-x: 100%;
+        transform: scale(1.1);
     }
 </style>
 
@@ -214,16 +253,34 @@
         </div>
 
         <form class="form" action="/addcard" method="post" enctype="multipart/form-data">
-            <input placeholder="Title" class="input" type="text" name="title" required>
-            <input placeholder="Price" class="input" type="text" name="price" required>
-            <input placeholder="Add Members" class="input" type="text" name="add" required>
-            <input placeholder="Storage" class="input" type="text" name="storage" required>
-            <input placeholder="Packs" class="input" type="text" name="pack" required>
-            <input class="input" type="file" name="image" required>
+
+            <select class="input menu" name="title" placeholder="Add Members">
+                <option class="opt" disabled selected>Select a Plan</option>
+                <option class="opt">Basic </option>
+                <option class="opt">Standard </option>
+                <option class="opt">Advanced </option>
+                <option class="opt">Enterprise </option>
+            </select>
+
+            <input placeholder=" Price" class="input" type="text" name="price" required>
+            <select class="input menu" name="add">
+                <option class="opt" disabled selected>Add Members</option>
+                <option class="opt">Add</option>
+                <option class="opt">No</option>
+            </select>
+            <input placeholder=" Storage" class="input" type="text" name="storage" required>
+            <select class="input menu" name="pack">
+                <option class="opt" disabled selected>Select Pack</option>
+                <option class="opt">Custom</option>
+                <option class="opt">Other</option>
+            </select>
+            <input type="file" class="input" name="image" required>
             <button type="submit" value="Accont Register">Submit</button>
+
         </form>
 
     </div>
+
 
     <div class="content">
         <div>
@@ -236,6 +293,19 @@
                 <span class="tag">Advance</span>
             </div>
             <hr>
+            <div class="tags">
+                <span class="tag">Prices</span>
+                <br> <br>
+                <span class="sag">39</span>
+                <span class="sag">69</span>
+                <span class="sag">99</span>
+                <span class="sag">159</span>
+                <span class="sag">199</span>
+                <br>
+                <br>
+            </div>
+            <hr>
+
             <div class="tags">
                 <span class="tag">Custom pack</span>
                 <span class="tag">Other pack</span>
